@@ -3,7 +3,7 @@ La Herencia es uno de los conceptos fundamentales de la programación orientada 
 
 ```c++
 //Crea la clase
-class Animal 
+class Animal
 {
   public:
     void comer() {
@@ -31,14 +31,14 @@ void setup()
 
 void loop()
 {
-  Dog dog1;
+  Dog perro;
 
-  dog1.comer();
-  dog1.dormir();
+  perro.comer();
+  perro.dormir();
 
   //Llama a la clase hija
-  dog1.ladrar();
-  
+  perro.ladrar();
+
   delay(1000);
 }
 ```
