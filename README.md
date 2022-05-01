@@ -5,31 +5,42 @@ La Herencia es uno de los conceptos fundamentales de la programación orientada 
 
 ```c++
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class ClaseBase
-{
-    protected:
-    int unaVar = 0;
-    public:
-    void unMetodo(void)
-    {
-        unaVar++;
-        cout<<"unaVar = "<<unaVar<<endl;
+// base class
+class Animal {
+
+   public:
+    void eat() {
+        cout << "I can eat!" << endl;
+    }
+
+    void sleep() {
+        cout << "I can sleep!" << endl;
     }
 };
 
-class ClaseDerivada : public ClaseBase  /* Sintaxis para indicar que ClaseDerivada hereda de ClaseBase */
-{
-    /* Esta clase implementa los miembros de clase que hereda de ClaseBase */
+// derived class
+class Dog : public Animal {
+ 
+   public:
+    void bark() {
+        cout << "I can bark! Woof woof!!" << endl;
+    }
 };
 
-int main()
-{
-    ClaseDerivada obj1;
-    obj1.unMetodo(); /* Acceso a los miembros heredados de ClaseBase */
-    obj1.unMetodo();
+int main() {
+    // Create object of the Dog class
+    Dog dog1;
+
+    // Calling members of the base class
+    dog1.eat();
+    dog1.sleep();
+
+    // Calling member of the derived class
+    dog1.bark();
+
     return 0;
 }
 ```
